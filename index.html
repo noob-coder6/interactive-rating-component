@@ -22,19 +22,21 @@
         Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!
       </p>
-      <div class="rating-buttons">
-        <button class="rating-btn">1</button>
-        <button class="rating-btn">2</button>
-        <button class="rating-btn">3</button>
-        <button class="rating-btn">4</button>
-        <button class="rating-btn">5</button>
+      <div class="rating-buttons" role="radiogroup" aria-labelledby="rating-title">
+        <h2 id="rating-title" class="sr-only">Select a rating</h2>
+        <button class="rating-btn" role="radio" aria-checked="false" aria-label="Rate 1 out of 5">1</button>
+        <button class="rating-btn" role="radio" aria-checked="false" aria-label="Rate 2 out of 5">2</button>
+        <button class="rating-btn" role="radio" aria-checked="false" aria-label="Rate 3 out of 5">3</button>
+        <button class="rating-btn" role="radio" aria-checked="false" aria-label="Rate 4 out of 5">4</button>
+        <button class="rating-btn" role="radio" aria-checked="false" aria-label="Rate 5 out of 5">5</button>
       </div>
       <button class="submit-btn">Submit</button>
+      <div id="alert-container" aria-live="assertive"></div>
     </div>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <div class="card thank-you-card hidden">
+    <div class="card thank-you-card hidden" aria-live="polite">
       <img src="./images/illustration-thank-you.svg" alt="Thank you illustration" class="thank-you-img">
       <p class="selection-recap">You selected <span id="selected-rating"></span> out of 5</p>
       <h1 class="card__title">Thank you!</h1>

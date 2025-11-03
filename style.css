@@ -88,9 +88,15 @@ main {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.rating-btn:hover {
+.rating-btn:hover,
+.rating-btn:focus-visible {
     background-color: var(--orange);
     color: var(--white);
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+}
+.rating-btn:focus-visible {
+    background-color: var(--orange);
 }
 
 .rating-btn.active {
@@ -113,9 +119,12 @@ main {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.submit-btn:hover {
+.submit-btn:hover,
+.submit-btn:focus-visible {
     background-color: var(--white);
     color: var(--orange);
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
 }
 
 .thank-you-card {
@@ -156,4 +165,17 @@ main {
 }
 .attribution a:hover {
     color: var(--orange);
+}
+
+/* Screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
